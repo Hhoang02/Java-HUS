@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.4">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Menlo; color: #deb468; -webkit-text-stroke: #deb468}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Menlo; color: #9ba2b1; -webkit-text-stroke: #9ba2b1; min-height: 14.0px}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Menlo; color: #519deb; -webkit-text-stroke: #519deb}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Menlo; color: #9ba2b1; -webkit-text-stroke: #9ba2b1}
+    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Menlo; color: #4a505d; -webkit-text-stroke: #4a505d}
+    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Menlo; color: #d65562; -webkit-text-stroke: #d65562}
+    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Menlo; color: #b85dd5; -webkit-text-stroke: #b85dd5}
+    span.s1 {font-kerning: none; color: #b85dd5; background-color: #1e2127; -webkit-text-stroke: 0px #b85dd5}
+    span.s2 {font-kerning: none; color: #9ba2b1; background-color: #1e2127; -webkit-text-stroke: 0px #9ba2b1}
+    span.s3 {font-kerning: none; background-color: #1e2127}
+    span.s4 {font-kerning: none}
+    span.s5 {font-kerning: none; color: #d65562; background-color: #1e2127; -webkit-text-stroke: 0px #d65562}
+    span.s6 {font-kerning: none; color: #4a505d; background-color: #1e2127; -webkit-text-stroke: 0px #4a505d}
+    span.s7 {font-kerning: none; color: #deb468; background-color: #1e2127; -webkit-text-stroke: 0px #deb468}
+    span.s8 {font-kerning: none; color: #519deb; background-color: #1e2127; -webkit-text-stroke: 0px #519deb}
+    span.s9 {font-kerning: none; color: #c58853; background-color: #1e2127; -webkit-text-stroke: 0px #c58853}
+    span.s10 {font-kerning: none; color: #88b966; background-color: #1e2127; -webkit-text-stroke: 0px #88b966}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">import</span><span class="s2"> </span><span class="s3">java.io.File</span><span class="s2">;</span></p>
+<p class="p1"><span class="s1">import</span><span class="s2"> </span><span class="s3">java.io.FileNotFoundException</span><span class="s2">;</span></p>
+<p class="p1"><span class="s1">import</span><span class="s2"> </span><span class="s3">java.util.ArrayList</span><span class="s2">;</span></p>
+<p class="p1"><span class="s1">import</span><span class="s2"> </span><span class="s3">java.util.Arrays</span><span class="s2">;</span></p>
+<p class="p1"><span class="s1">import</span><span class="s2"> </span><span class="s3">java.util.Collections</span><span class="s2">;</span></p>
+<p class="p1"><span class="s1">import</span><span class="s2"> </span><span class="s3">java.util.List</span><span class="s2">;</span></p>
+<p class="p1"><span class="s1">import</span><span class="s2"> </span><span class="s3">java.util.Scanner</span><span class="s2">;</span></p>
+<p class="p2"><span class="s4"></span><br></p>
+<p class="p1"><span class="s1">public</span><span class="s3"> </span><span class="s1">class</span><span class="s3"> CardManagement </span><span class="s2">{</span></p>
+<p class="p2"><span class="s4"></span><br></p>
+<p class="p2"><span class="s3"><span class="Apple-converted-space">    </span></span></p>
+<p class="p3"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s1">public</span><span class="s2"> </span><span class="s3">CardManagement</span><span class="s2">()</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">    </span>{</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">        </span></span><span class="s5">super</span><span class="s3">();</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">    </span></span><span class="s6"><i>/*</i><i></i></span></p>
+<p class="p5"><span class="s3"><i><span class="Apple-converted-space">        </span>Thứ tự nhập như sau:</i><i></i></span></p>
+<p class="p5"><span class="s3"><i><span class="Apple-converted-space">        </span>- Số lượng xe</i><i></i></span></p>
+<p class="p5"><span class="s3"><i><span class="Apple-converted-space">        </span>- Trong vòng lặp để nhập thông tin mỗi thẻ: nhập số nguyên c = 0 (thẻ học sinh) hoặc 1 (thẻ nhân viên)</i><i></i></span></p>
+<p class="p5"><span class="s3"><i><span class="Apple-converted-space">        </span>- Nhập thông tin mỗi thẻ: id, years, day, price, fee (với thẻ sinh viên), và card (với thẻ học sinh)</i><i></i></span></p>
+<p class="p5"><span class="s3"><i><span class="Apple-converted-space">    </span>*/</i><i></i></span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">    </span></span><span class="s1">public</span><span class="s3"> </span><span class="s7">ArrayList</span><span class="s3">&lt;</span><span class="s7">Card</span><span class="s3">&gt; </span><span class="s8">readData</span><span class="s3"> (</span><span class="s7">String</span><span class="s3"> fileName)</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">    </span>{</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">        </span></span><span class="s3">ArrayList</span><span class="s5">&lt;</span><span class="s3">Card</span><span class="s5">&gt; cards </span><span class="s1">=</span><span class="s2"> </span><span class="s1">new</span><span class="s2"> </span><span class="s3">ArrayList</span><span class="s2">&lt;&gt;();</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">        </span></span><span class="s1">try</span><span class="s3"> {</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">            </span></span><span class="s7">Scanner</span><span class="s5"> sc </span><span class="s1">=</span><span class="s3"> </span><span class="s1">new</span><span class="s3"> </span><span class="s8">Scanner</span><span class="s3">(</span><span class="s1">new</span><span class="s3"> </span><span class="s8">File</span><span class="s3">(fileName));</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">            </span></span><span class="s1">int</span><span class="s5"> n </span><span class="s1">=</span><span class="s3"> </span><span class="s5">Integer</span><span class="s3">.</span><span class="s8">parseInt</span><span class="s3">(</span><span class="s5">sc</span><span class="s3">.</span><span class="s8">nextLine</span><span class="s3">());<span class="Apple-converted-space">  </span></span><span class="s6"><i>/ Số lượng xe</i><i></i></span></p>
+<p class="p2"><span class="s3"><span class="Apple-converted-space">    </span></span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">            </span></span><span class="s1">for</span><span class="s3"> (</span><span class="s1">int</span><span class="s5"> i </span><span class="s1">=</span><span class="s3"> </span><span class="s9">0</span><span class="s3">; i </span><span class="s1">&lt;</span><span class="s3"> n; i</span><span class="s1">++</span><span class="s3">) {</span></p>
+<p class="p5"><span class="s2"><span class="Apple-converted-space">                </span></span><span class="s1">int</span><span class="s5"> type </span><span class="s1">=</span><span class="s2"> </span><span class="s5">Integer</span><span class="s2">.</span><span class="s8">parseInt</span><span class="s2">(</span><span class="s5">sc</span><span class="s2">.</span><span class="s8">nextLine</span><span class="s2">());<span class="Apple-converted-space">  </span></span><span class="s3"><i>// 0 = studentcard, 1 = staffcard</i><i></i></span></p>
+<p class="p2"><span class="s3"><span class="Apple-converted-space">    </span></span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">                </span></span><span class="s7">String</span><span class="s5"> id </span><span class="s1">=</span><span class="s3"> </span><span class="s5">sc</span><span class="s3">.</span><span class="s8">nextLine</span><span class="s3">();</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">                </span></span><span class="s7">Integer</span><span class="s5"> year </span><span class="s1">=</span><span class="s3"> </span><span class="s5">Integer</span><span class="s3">.</span><span class="s8">parseInt</span><span class="s3">(</span><span class="s5">sc</span><span class="s3">.</span><span class="s8">nextLine</span><span class="s3">());</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">                </span></span><span class="s1">double</span><span class="s5"> days </span><span class="s1">=</span><span class="s3"> </span><span class="s5">Double</span><span class="s3">.</span><span class="s8">parseDouble</span><span class="s3">(</span><span class="s5">sc</span><span class="s3">.</span><span class="s8">nextLine</span><span class="s3">());</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">                </span></span><span class="s1">double</span><span class="s5"> price </span><span class="s1">=</span><span class="s3"> </span><span class="s5">Double</span><span class="s3">.</span><span class="s8">parseDouble</span><span class="s3">(</span><span class="s5">sc</span><span class="s3">.</span><span class="s8">nextLine</span><span class="s3">());</span></p>
+<p class="p2"><span class="s3"><span class="Apple-converted-space">    </span></span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">                </span></span><span class="s1">if</span><span class="s3"> (type </span><span class="s1">==</span><span class="s3"> </span><span class="s9">0</span><span class="s3">) {</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">                    </span></span><span class="s1">double</span><span class="s5"> fee </span><span class="s1">=</span><span class="s3"> </span><span class="s5">Double</span><span class="s3">.</span><span class="s8">parseDouble</span><span class="s3">(</span><span class="s5">sc</span><span class="s3">.</span><span class="s8">nextLine</span><span class="s3">());</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">                    </span></span><span class="s5">cards</span><span class="s3">.</span><span class="s8">add</span><span class="s3">(</span><span class="s1">new</span><span class="s3"> </span><span class="s8">StudentCard</span><span class="s3">(id, year, days, price, fee));</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">                </span>} </span><span class="s1">else</span><span class="s3"> {</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">                    </span></span><span class="s1">double</span><span class="s5"> tax </span><span class="s1">=</span><span class="s3"> </span><span class="s5">Double</span><span class="s3">.</span><span class="s8">parseDouble</span><span class="s3">(</span><span class="s5">sc</span><span class="s3">.</span><span class="s8">nextLine</span><span class="s3">());</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">                    </span></span><span class="s5">cards</span><span class="s3">.</span><span class="s8">add</span><span class="s3">(</span><span class="s1">new</span><span class="s3"> </span><span class="s8">StaffCard</span><span class="s3">(id, year, days, price, tax));</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">                </span>}</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p2"><span class="s3"><span class="Apple-converted-space">    </span></span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">            </span></span><span class="s5">sc</span><span class="s3">.</span><span class="s8">close</span><span class="s3">();</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">        </span>} </span><span class="s1">catch</span><span class="s3"> (</span><span class="s7">Exception</span><span class="s3"> e) {</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">            </span></span><span class="s5">e</span><span class="s3">.</span><span class="s8">printStackTrace</span><span class="s3">();</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s3"><span class="Apple-converted-space">    </span></span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">        </span></span><span class="s1">return</span><span class="s3"> cards;</span></p>
+<p class="p2"><span class="s3"><span class="Apple-converted-space">        </span></span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s3"><span class="Apple-converted-space">    </span></span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">    </span></span><span class="s1">public</span><span class="s3"> </span><span class="s1">void</span><span class="s3"> </span><span class="s8">printArrayList</span><span class="s3">(</span><span class="s7">ArrayList</span><span class="s3">&lt;</span><span class="s7">Card</span><span class="s3">&gt; cards) {</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">        </span></span><span class="s1">for</span><span class="s3"> (</span><span class="s1">int</span><span class="s5"> i </span><span class="s1">=</span><span class="s9">0</span><span class="s3">;i</span><span class="s1">&lt;</span><span class="s5">cards</span><span class="s3">.</span><span class="s8">size</span><span class="s3">();i</span><span class="s1">++</span><span class="s3">)</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">            </span></span><span class="s5">System</span><span class="s3">.</span><span class="s5">out</span><span class="s3">.</span><span class="s8">println</span><span class="s3">(</span><span class="s5">cards</span><span class="s3">.</span><span class="s8">get</span><span class="s3">(i).</span><span class="s8">toString</span><span class="s3">());</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p5"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s3"><i>// Hoan thien phuong thuc findCards de tim nhung<span class="Apple-converted-space">  </span>xe co nam san xuat la year</i><i></i></span></p>
+<p class="p2"><span class="s3"><span class="Apple-converted-space">    </span></span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">    </span></span><span class="s1">public</span><span class="s3"> </span><span class="s7">ArrayList</span><span class="s3">&lt;</span><span class="s7">Card</span><span class="s3">&gt; </span><span class="s8">findCards</span><span class="s3"> (</span><span class="s7">ArrayList</span><span class="s3">&lt;</span><span class="s7">Card</span><span class="s3">&gt; cards, </span><span class="s1">int</span><span class="s3"> year){</span></p>
+<p class="p5"><span class="s2"><span class="Apple-converted-space">        </span></span><span class="s3"><i>//Begin editable part</i><i></i></span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">        </span></span><span class="s3">ArrayList</span><span class="s5">&lt;</span><span class="s3">Card</span><span class="s5">&gt; result </span><span class="s1">=</span><span class="s2"> </span><span class="s1">new</span><span class="s2"> </span><span class="s3">ArrayList</span><span class="s2">&lt;&gt;();</span></p>
+<p class="p2"><span class="s4"></span><br></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">        </span></span><span class="s1">for</span><span class="s3"> (</span><span class="s7">Card</span><span class="s5"> card </span><span class="s1">:</span><span class="s3"> cards){</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">            </span></span><span class="s1">if</span><span class="s3"> (</span><span class="s5">card</span><span class="s3">.</span><span class="s8">getYear</span><span class="s3">() </span><span class="s1">==</span><span class="s3"> year) {</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">                </span></span><span class="s5">result</span><span class="s3">.</span><span class="s8">add</span><span class="s3">(card);</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">        </span></span><span class="s1">return</span><span class="s3"> result;</span></p>
+<p class="p5"><span class="s2"><span class="Apple-converted-space">        </span></span><span class="s3"><i>//End editable part</i><i></i></span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s3"><span class="Apple-converted-space">    </span></span></p>
+<p class="p5"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s3"><i>// Hoan thien phuong thuc getMaxAmount de tim cac xe thuoc the loai typeOfCard</i><i></i></span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">    </span></span><span class="s1">public</span><span class="s3"> </span><span class="s7">ArrayList</span><span class="s3">&lt;</span><span class="s7">Card</span><span class="s3">&gt; </span><span class="s8">getMaxAmount</span><span class="s3"> (</span><span class="s7">ArrayList</span><span class="s3">&lt;</span><span class="s7">Card</span><span class="s3">&gt; cards, </span><span class="s7">String</span><span class="s3"> typeOfCard){</span></p>
+<p class="p5"><span class="s2"><span class="Apple-converted-space">        </span></span><span class="s3"><i>//Begin editable part</i><i></i></span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">        </span></span><span class="s3">ArrayList</span><span class="s5">&lt;</span><span class="s3">Card</span><span class="s5">&gt; result </span><span class="s1">=</span><span class="s2"> </span><span class="s1">new</span><span class="s2"> </span><span class="s3">ArrayList</span><span class="s2">&lt;&gt;();</span></p>
+<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span></span><span class="s1">double</span><span class="s3"> maxAmount </span><span class="s1">=</span><span class="s2"> </span><span class="s9">0</span><span class="s2">;</span></p>
+<p class="p2"><span class="s4"></span><br></p>
+<p class="p5"><span class="s2"><span class="Apple-converted-space">        </span></span><span class="s3"><i>// Bước 1: Tìm maxAmount</i><i></i></span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">        </span></span><span class="s1">for</span><span class="s3"> (</span><span class="s7">Card</span><span class="s5"> card</span><span class="s1">:</span><span class="s3"> cards) {</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">            </span></span><span class="s1">if</span><span class="s3"> (</span><span class="s5">typeOfCard</span><span class="s3">.</span><span class="s8">equalsIgnoreCase</span><span class="s3">(</span><span class="s10">"StaffCard"</span><span class="s3">) </span><span class="s1">&amp;&amp;</span><span class="s3"> card </span><span class="s1">instanceof</span><span class="s3"> StaffCard) {</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">                </span></span><span class="s1">if</span><span class="s3"> (</span><span class="s5">card</span><span class="s3">.</span><span class="s8">getAmount</span><span class="s3">() </span><span class="s1">&gt;</span><span class="s3"> maxAmount){</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">                    </span>maxAmount </span><span class="s1">=</span><span class="s3"> </span><span class="s5">card</span><span class="s3">.</span><span class="s8">getAmount</span><span class="s3">();</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">                </span>}</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p2"><span class="s3"><span class="Apple-converted-space">    </span></span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">            </span></span><span class="s1">else</span><span class="s3"> </span><span class="s1">if</span><span class="s3"> (</span><span class="s5">typeOfCard</span><span class="s3">.</span><span class="s8">equalsIgnoreCase</span><span class="s3">(</span><span class="s10">"StudentCard"</span><span class="s3">) </span><span class="s1">&amp;&amp;</span><span class="s3"> card </span><span class="s1">instanceof</span><span class="s3"> StudentCard) {</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">                </span></span><span class="s1">if</span><span class="s3"> (</span><span class="s5">card</span><span class="s3">.</span><span class="s8">getAmount</span><span class="s3">() </span><span class="s1">&gt;</span><span class="s3"> maxAmount){</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">                    </span>maxAmount </span><span class="s1">=</span><span class="s3"> </span><span class="s5">card</span><span class="s3">.</span><span class="s8">getAmount</span><span class="s3">();</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">                </span>}</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">            </span>} <span class="Apple-converted-space">           </span></span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p5"><span class="s2"><span class="Apple-converted-space">        </span></span><span class="s3"><i>// Bước 2: Tìm các thẻ có amount == maxAmount</i><i></i></span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">        </span></span><span class="s1">for</span><span class="s3"> (</span><span class="s7">Card</span><span class="s5"> card </span><span class="s1">:</span><span class="s3"> cards) {</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">            </span></span><span class="s1">if</span><span class="s3"> (</span><span class="s5">typeOfCard</span><span class="s3">.</span><span class="s8">equalsIgnoreCase</span><span class="s3">(</span><span class="s10">"StaffCard"</span><span class="s3">) </span><span class="s1">&amp;&amp;</span><span class="s3"> card </span><span class="s1">instanceof</span><span class="s3"> StaffCard) {</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">                </span></span><span class="s1">if</span><span class="s3"> (</span><span class="s5">card</span><span class="s3">.</span><span class="s8">getAmount</span><span class="s3">() </span><span class="s1">==</span><span class="s3"> maxAmount) {</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">                    </span></span><span class="s5">result</span><span class="s3">.</span><span class="s8">add</span><span class="s3">(card);</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">                </span>}</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">            </span>} </span><span class="s1">else</span><span class="s3"> </span><span class="s1">if</span><span class="s3"> (</span><span class="s5">typeOfCard</span><span class="s3">.</span><span class="s8">equalsIgnoreCase</span><span class="s3">(</span><span class="s10">"StudentCard"</span><span class="s3">) </span><span class="s1">&amp;&amp;</span><span class="s3"> card </span><span class="s1">instanceof</span><span class="s3"> StudentCard) {</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">                </span></span><span class="s1">if</span><span class="s3"> (</span><span class="s5">card</span><span class="s3">.</span><span class="s8">getAmount</span><span class="s3">() </span><span class="s1">==</span><span class="s3"> maxAmount) {</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">                    </span></span><span class="s5">result</span><span class="s3">.</span><span class="s8">add</span><span class="s3">(card);</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">                </span>}</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s4"></span><br></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">    </span></span><span class="s1">return</span><span class="s3"> result;</span></p>
+<p class="p2"><span class="s4"></span><br></p>
+<p class="p5"><span class="s2"><span class="Apple-converted-space">        </span></span><span class="s3"><i>//End editable part</i><i></i></span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s3"><span class="Apple-converted-space">    </span></span></p>
+<p class="p2"><span class="s3"><span class="Apple-converted-space">    </span></span></p>
+<p class="p5"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s3"><i>// Hoan thien phuong thuc sortByAmount de sap xep cac xe theo thu tu giam dan</i><i></i></span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">    </span></span><span class="s1">public</span><span class="s3"> </span><span class="s1">void</span><span class="s3"> </span><span class="s8">sortByAmount</span><span class="s3"> (</span><span class="s7">ArrayList</span><span class="s3">&lt;</span><span class="s7">Card</span><span class="s3">&gt; cards) {</span></p>
+<p class="p5"><span class="s2"><span class="Apple-converted-space">        </span></span><span class="s3"><i>//Begin editable part</i><i></i></span></p>
+<p class="p2"><span class="s4"></span><br></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">        </span></span><span class="s1">for</span><span class="s3"> (</span><span class="s1">int</span><span class="s5"> i </span><span class="s1">=</span><span class="s3"> </span><span class="s9">0</span><span class="s3">; i </span><span class="s1">&lt;</span><span class="s3"> </span><span class="s5">cards</span><span class="s3">.</span><span class="s8">size</span><span class="s3">() </span><span class="s1">-</span><span class="s3"> </span><span class="s9">1</span><span class="s3">; i</span><span class="s1">++</span><span class="s3">) {</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">            </span></span><span class="s1">for</span><span class="s3"> (</span><span class="s1">int</span><span class="s5"> j </span><span class="s1">=</span><span class="s3"> i </span><span class="s1">+</span><span class="s3"> </span><span class="s9">1</span><span class="s3">; j </span><span class="s1">&lt;</span><span class="s3"> </span><span class="s5">cards</span><span class="s3">.</span><span class="s8">size</span><span class="s3">(); j</span><span class="s1">++</span><span class="s3">) {</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">                </span></span><span class="s1">if</span><span class="s3"> (</span><span class="s5">cards</span><span class="s3">.</span><span class="s8">get</span><span class="s3">(i).</span><span class="s8">getAmount</span><span class="s3">() </span><span class="s1">&lt;</span><span class="s3"> </span><span class="s5">cards</span><span class="s3">.</span><span class="s8">get</span><span class="s3">(j).</span><span class="s8">getAmount</span><span class="s3">()) {</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">                    </span></span><span class="s7">Card</span><span class="s5"> tmp </span><span class="s1">=</span><span class="s3"> </span><span class="s5">cards</span><span class="s3">.</span><span class="s8">get</span><span class="s3">(i);</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">                    </span></span><span class="s5">cards</span><span class="s3">.</span><span class="s8">set</span><span class="s3">(i, </span><span class="s5">cards</span><span class="s3">.</span><span class="s8">get</span><span class="s3">(j));</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">                    </span></span><span class="s5">cards</span><span class="s3">.</span><span class="s8">set</span><span class="s3">(j, tmp);</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">                </span>}</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s4"></span><br></p>
+<p class="p5"><span class="s2"><span class="Apple-converted-space">        </span></span><span class="s3"><i>//End editable part</i><i></i></span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p7"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s3">public</span><span class="s2"> </span><span class="s3">static</span><span class="s2"> </span><span class="s3">void</span><span class="s2"> </span><span class="s8">main</span><span class="s2">(</span><span class="s7">String</span><span class="s2">[] args) </span><span class="s3">throws</span><span class="s2"> </span><span class="s7">Exception</span><span class="s2">{</span></p>
+<p class="p5"><span class="s2"><span class="Apple-converted-space">        </span></span><span class="s3"><i>// TODO Auto-generated method stub</i><i></i></span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">        </span></span><span class="s3">CardManagement</span><span class="s5"> cardMng </span><span class="s1">=</span><span class="s2"> </span><span class="s1">new</span><span class="s2"> </span><span class="s8">CardManagement</span><span class="s2">();</span></p>
+<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span></span><span class="s7">ArrayList</span><span class="s3">&lt;</span><span class="s7">Card</span><span class="s3">&gt; cards </span><span class="s1">=</span><span class="s2"> </span><span class="s3">cardMng</span><span class="s2">.</span><span class="s8">readData</span><span class="s2">(</span><span class="s10">"datas.txt"</span><span class="s2">);</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s4"></span><br></p>
+<p class="p4"><span class="s3">}</span></p>
+<p class="p2"><span class="s4"></span><br></p>
+</body>
+</html>

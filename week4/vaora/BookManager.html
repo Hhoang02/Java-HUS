@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.4">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Menlo; color: #deb468; -webkit-text-stroke: #deb468}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Menlo; color: #9ba2b1; -webkit-text-stroke: #9ba2b1; min-height: 14.0px}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Menlo; color: #4a505d; -webkit-text-stroke: #4a505d}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Menlo; color: #9ba2b1; -webkit-text-stroke: #9ba2b1}
+    span.s1 {font-kerning: none; color: #b85dd5; background-color: #1e2127; -webkit-text-stroke: 0px #b85dd5}
+    span.s2 {font-kerning: none; color: #9ba2b1; background-color: #1e2127; -webkit-text-stroke: 0px #9ba2b1}
+    span.s3 {font-kerning: none; background-color: #1e2127}
+    span.s4 {font-kerning: none}
+    span.s5 {font-kerning: none; color: #deb468; background-color: #1e2127; -webkit-text-stroke: 0px #deb468}
+    span.s6 {font-kerning: none; color: #519deb; background-color: #1e2127; -webkit-text-stroke: 0px #519deb}
+    span.s7 {font-kerning: none; color: #d65562; background-color: #1e2127; -webkit-text-stroke: 0px #d65562}
+    span.s8 {font-kerning: none; color: #c58853; background-color: #1e2127; -webkit-text-stroke: 0px #c58853}
+    span.s9 {font-kerning: none; color: #88b966; background-color: #1e2127; -webkit-text-stroke: 0px #88b966}
+    span.s10 {font-kerning: none; color: #4a505d; background-color: #1e2127; -webkit-text-stroke: 0px #4a505d}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">import</span><span class="s2"> </span><span class="s3">java.util.ArrayList</span><span class="s2">;</span></p>
+<p class="p1"><span class="s1">import</span><span class="s2"> </span><span class="s3">java.util.Scanner</span><span class="s2">;</span></p>
+<p class="p2"><span class="s4"></span><br></p>
+<p class="p1"><span class="s1">public</span><span class="s3"> </span><span class="s1">class</span><span class="s3"> BookManagement </span><span class="s2">{</span></p>
+<p class="p3"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s3"><i>/* Thứ tự nhập</i><i></i></span></p>
+<p class="p3"><span class="s3"><i><span class="Apple-converted-space">        </span>+) Số lượng các cuốn sách</i><i></i></span></p>
+<p class="p2"><span class="s4"></span><br></p>
+<p class="p3"><span class="s3"><i><span class="Apple-converted-space">        </span>+) 1 số nguyên 0 hoặc 1 (nếu 0 là sách tham khảo, 1 là sách giáo khoa)</i><i></i></span></p>
+<p class="p2"><span class="s4"></span><br></p>
+<p class="p3"><span class="s3"><i><span class="Apple-converted-space">        </span>+)<span class="Apple-converted-space">  </span>id (mã sách), name (tên sách), quantity (số lượng), publisher (NXB), price (giá)</i><i></i></span></p>
+<p class="p2"><span class="s4"></span><br></p>
+<p class="p3"><span class="s3"><i><span class="Apple-converted-space">        </span>+)<span class="Apple-converted-space">  </span>status (trạng thái) với sách giáo khoa,<span class="Apple-converted-space">  </span>tax (thuế) đối với sách tham khảo.</i><i></i></span></p>
+<p class="p3"><span class="s3"><i><span class="Apple-converted-space">    </span>*/</i><i></i></span></p>
+<p class="p2"><span class="s4"></span><br></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">    </span></span><span class="s1">public</span><span class="s3"> </span><span class="s5">Book</span><span class="s3">[] </span><span class="s6">readData</span><span class="s3">(</span><span class="s5">Scanner</span><span class="s3"> sc) {</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">        </span></span><span class="s1">int</span><span class="s7"> n </span><span class="s1">=</span><span class="s3"> </span><span class="s7">Integer</span><span class="s3">.</span><span class="s6">parseInt</span><span class="s3">(</span><span class="s7">sc</span><span class="s3">.</span><span class="s6">nextLine</span><span class="s3">());</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">        </span></span><span class="s5">Book</span><span class="s7">[] books </span><span class="s1">=</span><span class="s3"> </span><span class="s1">new</span><span class="s3"> </span><span class="s5">Book</span><span class="s3">[n];</span></p>
+<p class="p2"><span class="s4"></span><br></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">        </span></span><span class="s1">for</span><span class="s3"> (</span><span class="s1">int</span><span class="s7"> i </span><span class="s1">=</span><span class="s3"> </span><span class="s8">0</span><span class="s3">; i </span><span class="s1">&lt;</span><span class="s3"> n; i</span><span class="s1">++</span><span class="s3">) {</span></p>
+<p class="p3"><span class="s2"><span class="Apple-converted-space">            </span></span><span class="s1">int</span><span class="s7"> type </span><span class="s1">=</span><span class="s2"> </span><span class="s7">Integer</span><span class="s2">.</span><span class="s6">parseInt</span><span class="s2">(</span><span class="s7">sc</span><span class="s2">.</span><span class="s6">nextLine</span><span class="s2">()); </span><span class="s3"><i>// 0: ReferenceBook, 1: TextBook</i><i></i></span></p>
+<p class="p2"><span class="s3"><span class="Apple-converted-space">    </span></span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">            </span></span><span class="s5">String</span><span class="s7"> id </span><span class="s1">=</span><span class="s3"> </span><span class="s7">sc</span><span class="s3">.</span><span class="s6">nextLine</span><span class="s3">();</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">            </span></span><span class="s5">String</span><span class="s7"> name </span><span class="s1">=</span><span class="s3"> </span><span class="s7">sc</span><span class="s3">.</span><span class="s6">nextLine</span><span class="s3">();</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">            </span></span><span class="s1">int</span><span class="s7"> quantity </span><span class="s1">=</span><span class="s3"> </span><span class="s7">Integer</span><span class="s3">.</span><span class="s6">parseInt</span><span class="s3">(</span><span class="s7">sc</span><span class="s3">.</span><span class="s6">nextLine</span><span class="s3">());</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">            </span></span><span class="s5">String</span><span class="s7"> publisher </span><span class="s1">=</span><span class="s3"> </span><span class="s7">sc</span><span class="s3">.</span><span class="s6">nextLine</span><span class="s3">();</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">            </span></span><span class="s1">double</span><span class="s7"> price </span><span class="s1">=</span><span class="s3"> </span><span class="s7">Double</span><span class="s3">.</span><span class="s6">parseDouble</span><span class="s3">(</span><span class="s7">sc</span><span class="s3">.</span><span class="s6">nextLine</span><span class="s3">());</span></p>
+<p class="p2"><span class="s3"><span class="Apple-converted-space">    </span></span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">            </span></span><span class="s1">if</span><span class="s3"> (type </span><span class="s1">==</span><span class="s3"> </span><span class="s8">1</span><span class="s3">) {</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">                </span></span><span class="s1">boolean</span><span class="s7"> status </span><span class="s1">=</span><span class="s3"> </span><span class="s7">Boolean</span><span class="s3">.</span><span class="s6">parseBoolean</span><span class="s3">(</span><span class="s7">sc</span><span class="s3">.</span><span class="s6">nextLine</span><span class="s3">());</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">                </span>books[i] </span><span class="s1">=</span><span class="s3"> </span><span class="s1">new</span><span class="s3"> </span><span class="s6">TextBook</span><span class="s3">(id, name, quantity, publisher, price, status);</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">            </span>} </span><span class="s1">else</span><span class="s3"> {</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">                </span></span><span class="s1">double</span><span class="s7"> tax </span><span class="s1">=</span><span class="s3"> </span><span class="s7">Double</span><span class="s3">.</span><span class="s6">parseDouble</span><span class="s3">(</span><span class="s7">sc</span><span class="s3">.</span><span class="s6">nextLine</span><span class="s3">());</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">                </span>books[i] </span><span class="s1">=</span><span class="s3"> </span><span class="s1">new</span><span class="s3"> </span><span class="s6">ReferenceBook</span><span class="s3">(id, name, quantity, publisher, price, tax);</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">        </span></span><span class="s1">return</span><span class="s3"> books;</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p3"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s3"><i>// In thong tin các cuốn sách</i><i></i></span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">    </span></span><span class="s1">public</span><span class="s3"> </span><span class="s1">void</span><span class="s3"> </span><span class="s6">printBooks</span><span class="s3">(</span><span class="s5">Book</span><span class="s3">[] books) {</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">        </span></span><span class="s1">for</span><span class="s3"> (</span><span class="s5">Book</span><span class="s7"> i </span><span class="s1">:</span><span class="s3"> books) {</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">            </span></span><span class="s7">System</span><span class="s3">.</span><span class="s7">out</span><span class="s3">.</span><span class="s6">println</span><span class="s3">(i);</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p3"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s3"><i>// Tìm các cuốn sách của nhà xuất bản publisher</i><i></i></span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">    </span></span><span class="s1">public</span><span class="s3"> </span><span class="s5">ArrayList</span><span class="s3">&lt;</span><span class="s5">Book</span><span class="s3">&gt; </span><span class="s6">findBooks</span><span class="s3">(</span><span class="s5">Book</span><span class="s3">[] books, </span><span class="s5">String</span><span class="s3"> publisher) {</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">        </span></span><span class="s3">ArrayList</span><span class="s7">&lt;</span><span class="s3">Book</span><span class="s7">&gt; result </span><span class="s1">=</span><span class="s2"> </span><span class="s1">new</span><span class="s2"> </span><span class="s3">ArrayList</span><span class="s2">&lt;&gt;();</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">        </span></span><span class="s1">for</span><span class="s3"> (</span><span class="s5">Book</span><span class="s7"> b </span><span class="s1">:</span><span class="s3"> books) {</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">            </span></span><span class="s1">if</span><span class="s3"> (</span><span class="s7">b</span><span class="s3">.</span><span class="s6">getPublisher</span><span class="s3">().</span><span class="s6">equalsIgnoreCase</span><span class="s3">(publisher)) {</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">                </span></span><span class="s7">result</span><span class="s3">.</span><span class="s6">add</span><span class="s3">(b);</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">        </span></span><span class="s1">return</span><span class="s3"> result;</span></p>
+<p class="p2"><span class="s4"></span><br></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p3"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s3"><i>// Tính giá trị trung bình của các cuốn sách thuộc thể loại typeOfBooks</i><i></i></span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">    </span></span><span class="s1">public</span><span class="s3"> </span><span class="s1">double</span><span class="s3"> </span><span class="s6">computeAverage</span><span class="s3">(</span><span class="s5">Book</span><span class="s3">[] books, </span><span class="s5">String</span><span class="s3"> typeOfBooks) {</span></p>
+<p class="p3"><span class="s2"><span class="Apple-converted-space">        </span></span><span class="s1">double</span><span class="s7"> totalAmount </span><span class="s1">=</span><span class="s2"> </span><span class="s8">0</span><span class="s2">; </span><span class="s3"><i>// Tổng số tiền của các sách cần tính</i><i></i></span></p>
+<p class="p3"><span class="s2"><span class="Apple-converted-space">        </span></span><span class="s1">int</span><span class="s7"> bookCount </span><span class="s1">=</span><span class="s2"> </span><span class="s8">0</span><span class="s2">;<span class="Apple-converted-space">      </span></span><span class="s3"><i>// Số lượng sách cần tính</i><i></i></span></p>
+<p class="p2"><span class="s3"><span class="Apple-converted-space">    </span></span></p>
+<p class="p3"><span class="s2"><span class="Apple-converted-space">        </span></span><span class="s3"><i>// Duyệt qua từng cuốn sách trong mảng</i><i></i></span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">        </span></span><span class="s1">for</span><span class="s3"> (</span><span class="s1">int</span><span class="s7"> i </span><span class="s1">=</span><span class="s3"> </span><span class="s8">0</span><span class="s3">; i </span><span class="s1">&lt;</span><span class="s3"> </span><span class="s7">books</span><span class="s3">.</span><span class="s7">length</span><span class="s3">; i</span><span class="s1">++</span><span class="s3">) {</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">            </span></span><span class="s5">Book</span><span class="s7"> currentBook </span><span class="s1">=</span><span class="s3"> books[i];</span></p>
+<p class="p2"><span class="s3"><span class="Apple-converted-space">    </span></span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">            </span></span><span class="s1">if</span><span class="s3"> (</span><span class="s7">typeOfBooks</span><span class="s3">.</span><span class="s6">equalsIgnoreCase</span><span class="s3">(</span><span class="s9">"TextBook"</span><span class="s3">) </span><span class="s1">&amp;&amp;</span><span class="s3"> currentBook </span><span class="s1">instanceof</span><span class="s3"> TextBook) {</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">                </span>totalAmount </span><span class="s1">+=</span><span class="s3"> </span><span class="s7">currentBook</span><span class="s3">.</span><span class="s6">getAmount</span><span class="s3">(); </span><span class="s10"><i>// Cộng tiền của sách này vào tổng</i><i></i></span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">                </span>bookCount</span><span class="s1">++</span><span class="s3">; </span><span class="s10"><i>// Tăng số lượng sách lên</i><i></i></span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p2"><span class="s3"><span class="Apple-converted-space">    </span></span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">            </span></span><span class="s1">else</span><span class="s3"> </span><span class="s1">if</span><span class="s3"> (</span><span class="s7">typeOfBooks</span><span class="s3">.</span><span class="s6">equalsIgnoreCase</span><span class="s3">(</span><span class="s9">"ReferenceBook"</span><span class="s3">) </span><span class="s1">&amp;&amp;</span><span class="s3"> currentBook </span><span class="s1">instanceof</span><span class="s3"> ReferenceBook) {</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">                </span>totalAmount </span><span class="s1">+=</span><span class="s3"> </span><span class="s7">currentBook</span><span class="s3">.</span><span class="s6">getAmount</span><span class="s3">();</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">                </span>bookCount</span><span class="s1">++</span><span class="s3">;</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s4"></span><br></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">        </span></span><span class="s1">return</span><span class="s3"> totalAmount </span><span class="s1">/</span><span class="s3"> bookCount;</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p3"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s3"><i>// Sắp xếp các cuốn sách tăng dần về giá tiền</i><i></i></span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">    </span></span><span class="s1">public</span><span class="s3"> </span><span class="s1">void</span><span class="s3"> </span><span class="s6">sortByPrice</span><span class="s3">(</span><span class="s5">Book</span><span class="s3">[] books) {</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">        </span></span><span class="s1">for</span><span class="s3"> (</span><span class="s1">int</span><span class="s7"> i </span><span class="s1">=</span><span class="s3"> </span><span class="s8">0</span><span class="s3">; i </span><span class="s1">&lt;</span><span class="s3"> </span><span class="s7">books</span><span class="s3">.</span><span class="s7">length</span><span class="s3"> </span><span class="s1">-</span><span class="s3"> </span><span class="s8">1</span><span class="s3">; i</span><span class="s1">++</span><span class="s3">) {</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">            </span></span><span class="s1">for</span><span class="s3"> (</span><span class="s1">int</span><span class="s7"> j </span><span class="s1">=</span><span class="s3"> i </span><span class="s1">+</span><span class="s3"> </span><span class="s8">1</span><span class="s3">; j </span><span class="s1">&lt;</span><span class="s3"> </span><span class="s7">books</span><span class="s3">.</span><span class="s7">length</span><span class="s3">; j</span><span class="s1">++</span><span class="s3">) {</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">                </span></span><span class="s1">if</span><span class="s3"> (books[i].</span><span class="s6">getPrice</span><span class="s3">() </span><span class="s1">&gt;</span><span class="s3"> books[j].</span><span class="s6">getPrice</span><span class="s3">()) {</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">                    </span></span><span class="s5">Book</span><span class="s7"> tmp </span><span class="s1">=</span><span class="s3"> books[i];</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">                    </span>books[i] </span><span class="s1">=</span><span class="s3"> books[j];</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">                    </span>books[j] </span><span class="s1">=</span><span class="s3"> tmp;</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">                </span>}</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p2"><span class="s4"></span><br></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">    </span></span><span class="s1">public</span><span class="s3"> </span><span class="s1">static</span><span class="s3"> </span><span class="s1">void</span><span class="s3"> </span><span class="s6">main</span><span class="s3">(</span><span class="s5">String</span><span class="s3">[] args) {</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">        </span></span><span class="s5">Scanner</span><span class="s7"> sc </span><span class="s1">=</span><span class="s3"> </span><span class="s1">new</span><span class="s3"> </span><span class="s6">Scanner</span><span class="s3">(</span><span class="s7">System</span><span class="s3">.</span><span class="s7">in</span><span class="s3">);</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">        </span></span><span class="s3">BookManagement</span><span class="s7"> bm </span><span class="s1">=</span><span class="s2"> </span><span class="s1">new</span><span class="s2"> </span><span class="s6">BookManagement</span><span class="s2">();</span></p>
+<p class="p2"><span class="s3"><span class="Apple-converted-space">    </span></span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">        </span></span><span class="s5">Book</span><span class="s7">[] books </span><span class="s1">=</span><span class="s3"> </span><span class="s7">bm</span><span class="s3">.</span><span class="s6">readData</span><span class="s3">(sc);</span></p>
+<p class="p4"><span class="s3"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p4"><span class="s3">}</span></p>
+<p class="p2"><span class="s4"></span><br></p>
+</body>
+</html>

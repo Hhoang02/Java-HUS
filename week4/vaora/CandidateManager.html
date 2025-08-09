@@ -1,0 +1,227 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.4">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Menlo; color: #deb468; -webkit-text-stroke: #deb468}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Menlo; color: #b85dd5; -webkit-text-stroke: #b85dd5}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Menlo; color: #9ba2b1; -webkit-text-stroke: #9ba2b1; min-height: 14.0px}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Menlo; color: #519deb; -webkit-text-stroke: #519deb}
+    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Menlo; color: #9ba2b1; -webkit-text-stroke: #9ba2b1}
+    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Menlo; color: #4a505d; -webkit-text-stroke: #4a505d}
+    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Menlo; color: #d65562; -webkit-text-stroke: #d65562}
+    span.s1 {font-kerning: none; color: #b85dd5; background-color: #1e2127; -webkit-text-stroke: 0px #b85dd5}
+    span.s2 {font-kerning: none; color: #9ba2b1; background-color: #1e2127; -webkit-text-stroke: 0px #9ba2b1}
+    span.s3 {font-kerning: none; background-color: #1e2127}
+    span.s4 {font-kerning: none; color: #88b966; background-color: #1e2127; -webkit-text-stroke: 0px #88b966}
+    span.s5 {font-kerning: none; color: #d65562; background-color: #1e2127; -webkit-text-stroke: 0px #d65562}
+    span.s6 {font-kerning: none; color: #deb468; background-color: #1e2127; -webkit-text-stroke: 0px #deb468}
+    span.s7 {font-kerning: none; color: #4a505d; background-color: #1e2127; -webkit-text-stroke: 0px #4a505d}
+    span.s8 {font-kerning: none; color: #519deb; background-color: #1e2127; -webkit-text-stroke: 0px #519deb}
+    span.s9 {font-kerning: none; color: #48a8b5; background-color: #1e2127; -webkit-text-stroke: 0px #48a8b5}
+    span.s10 {font-kerning: none; color: #c58853; background-color: #1e2127; -webkit-text-stroke: 0px #c58853}
+    span.s11 {font-kerning: none}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">import</span><span class="s2"> </span><span class="s3">java.io.File</span><span class="s2">;</span></p>
+<p class="p1"><span class="s1">import</span><span class="s2"> </span><span class="s3">java.io.FileNotFoundException</span><span class="s2">;</span></p>
+<p class="p1"><span class="s1">import</span><span class="s2"> </span><span class="s3">java.io.IOException</span><span class="s2">;</span></p>
+<p class="p1"><span class="s1">import</span><span class="s2"> </span><span class="s3">java.util.ArrayList</span><span class="s2">;</span></p>
+<p class="p1"><span class="s1">import</span><span class="s2"> </span><span class="s3">java.util.Collections</span><span class="s2">;</span></p>
+<p class="p1"><span class="s1">import</span><span class="s2"> </span><span class="s3">java.util.Scanner</span><span class="s2">;</span></p>
+<p class="p2"><span class="s2">@</span><span class="s3">SuppressWarnings</span><span class="s2">(</span><span class="s4">"unchecked"</span><span class="s2">)</span></p>
+<p class="p1"><span class="s1">public</span><span class="s3"> </span><span class="s1">class</span><span class="s3"> CandidateManager </span><span class="s2">{</span></p>
+<p class="p3"><span class="s3"><span class="Apple-converted-space">    </span></span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s1">private</span><span class="s2"> </span><span class="s3">ArrayList</span><span class="s5">&lt;</span><span class="s3">Candidate</span><span class="s5">&gt; candidates</span><span class="s2">;</span></p>
+<p class="p3"><span class="s3"><span class="Apple-converted-space">    </span></span></p>
+<p class="p4"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s1">public</span><span class="s2"> </span><span class="s3">CandidateManager</span><span class="s2">() {</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">        </span></span><span class="s5">this</span><span class="s3">.</span><span class="s5">candidates</span><span class="s3"> </span><span class="s1">=</span><span class="s3"> </span><span class="s1">new</span><span class="s3"> </span><span class="s6">ArrayList</span><span class="s3">&lt;&gt;();</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p3"><span class="s3"><span class="Apple-converted-space">    </span></span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">    </span></span><span class="s7"><i>/*</i><i></i></span></p>
+<p class="p6"><span class="s3"><i><span class="Apple-converted-space">    </span>readData</i><i></i></span></p>
+<p class="p6"><span class="s3"><i><span class="Apple-converted-space">    </span>doc du lieu tu file van ban textFile va luu du lieu vao cac bien thanh vien</i><i></i></span></p>
+<p class="p6"><span class="s3"><i><span class="Apple-converted-space">    </span>*/</i><i></i></span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">    </span></span><span class="s1">public</span><span class="s3"> </span><span class="s1">boolean</span><span class="s3"> </span><span class="s8">readData</span><span class="s3">(</span><span class="s6">String</span><span class="s3"> textFile) {</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">        </span></span><span class="s1">try</span><span class="s3"> {</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">            </span></span><span class="s6">File</span><span class="s5"> file </span><span class="s1">=</span><span class="s3"> </span><span class="s1">new</span><span class="s3"> </span><span class="s8">File</span><span class="s3">(textFile);</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">            </span></span><span class="s6">Scanner</span><span class="s5"> fileReader </span><span class="s1">=</span><span class="s3"> </span><span class="s1">new</span><span class="s3"> </span><span class="s8">Scanner</span><span class="s3">(file);</span></p>
+<p class="p3"><span class="s3"><span class="Apple-converted-space">            </span></span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">            </span></span><span class="s1">while</span><span class="s3"> (</span><span class="s5">fileReader</span><span class="s3">.</span><span class="s8">hasNextLine</span><span class="s3">()) {</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">                </span></span><span class="s6">String</span><span class="s5">[] fields </span><span class="s1">=</span><span class="s3"> </span><span class="s5">fileReader</span><span class="s3">.</span><span class="s8">nextLine</span><span class="s3">().</span><span class="s8">trim</span><span class="s3">().</span><span class="s8">split</span><span class="s3">(</span><span class="s4">"</span><span class="s9">\\</span><span class="s4">|"</span><span class="s3">);</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">                </span></span><span class="s1">if</span><span class="s3"> (</span><span class="s5">fields</span><span class="s3">.</span><span class="s5">length</span><span class="s3"> </span><span class="s1">!=</span><span class="s3"> </span><span class="s10">6</span><span class="s3">) {</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">                    </span></span><span class="s1">continue</span><span class="s3">;</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">                </span>}</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">                </span></span><span class="s6">String</span><span class="s5"> id </span><span class="s1">=</span><span class="s3"> fields[</span><span class="s10">0</span><span class="s3">].</span><span class="s8">trim</span><span class="s3">();</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">                </span></span><span class="s6">String</span><span class="s5"> name </span><span class="s1">=</span><span class="s3"> fields[</span><span class="s10">1</span><span class="s3">].</span><span class="s8">trim</span><span class="s3">();</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">                </span></span><span class="s6">String</span><span class="s5"> selection </span><span class="s1">=</span><span class="s3"> fields[</span><span class="s10">2</span><span class="s3">].</span><span class="s8">trim</span><span class="s3">();</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">                </span></span><span class="s6">String</span><span class="s5"> sex </span><span class="s1">=</span><span class="s3"> fields[</span><span class="s10">3</span><span class="s3">].</span><span class="s8">trim</span><span class="s3">();</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">                </span></span><span class="s1">int</span><span class="s5"> year </span><span class="s1">=</span><span class="s3"> </span><span class="s5">Integer</span><span class="s3">.</span><span class="s8">parseInt</span><span class="s3">(fields[</span><span class="s10">4</span><span class="s3">].</span><span class="s8">trim</span><span class="s3">());</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">                </span></span><span class="s1">int</span><span class="s5"> priority </span><span class="s1">=</span><span class="s3"> </span><span class="s5">Integer</span><span class="s3">.</span><span class="s8">parseInt</span><span class="s3">(fields[</span><span class="s10">5</span><span class="s3">].</span><span class="s8">trim</span><span class="s3">());</span></p>
+<p class="p3"><span class="s3"><span class="Apple-converted-space">                </span></span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">                </span></span><span class="s6">Candidate</span><span class="s5"> newCandidate </span><span class="s1">=</span><span class="s3"> </span><span class="s1">new</span><span class="s3"> </span><span class="s8">Candidate</span><span class="s3">(id, name, selection, sex, year, priority);</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">                </span></span><span class="s5">this</span><span class="s3">.</span><span class="s5">candidates</span><span class="s3">.</span><span class="s8">add</span><span class="s3">(newCandidate);</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p3"><span class="s3"><span class="Apple-converted-space">            </span></span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">            </span></span><span class="s5">fileReader</span><span class="s3">.</span><span class="s8">close</span><span class="s3">();</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">            </span></span><span class="s1">return</span><span class="s3"> </span><span class="s10">true</span><span class="s3">;</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">        </span>} </span><span class="s1">catch</span><span class="s3">(</span><span class="s6">IOException</span><span class="s3"> ex) {</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">            </span></span><span class="s5">System</span><span class="s3">.</span><span class="s5">out</span><span class="s3">.</span><span class="s8">println</span><span class="s3">(</span><span class="s4">"Error reading file '"</span><span class="s3"> </span><span class="s1">+</span><span class="s3"> textFile </span><span class="s1">+</span><span class="s3"> </span><span class="s4">"'"</span><span class="s3">);</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">            </span></span><span class="s1">return</span><span class="s3"> </span><span class="s10">false</span><span class="s3">;</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">        </span>} <span class="Apple-converted-space"> </span></span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p3"><span class="s3"><span class="Apple-converted-space">    </span></span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">    </span></span><span class="s7"><i>/*<span class="Apple-converted-space"> </span></i><i></i></span></p>
+<p class="p6"><span class="s3"><i><span class="Apple-converted-space">    </span>getSelectionCandicates<span class="Apple-converted-space"> </span></i><i></i></span></p>
+<p class="p6"><span class="s3"><i><span class="Apple-converted-space">    </span>trả về danh sách các thí sinh có khối thi là selection<span class="Apple-converted-space"> </span></i><i></i></span></p>
+<p class="p6"><span class="s3"><i><span class="Apple-converted-space">    </span>*/</i><i></i></span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s1">public</span><span class="s2"> </span><span class="s3">ArrayList</span><span class="s2">&lt;</span><span class="s3">Candidate</span><span class="s2">&gt; </span><span class="s8">getSelectionCandicates</span><span class="s2">(</span><span class="s3">String</span><span class="s2"> selection) {<span class="Apple-converted-space"> </span></span></p>
+<p class="p3"><span class="s3"><span class="Apple-converted-space">        </span></span></p>
+<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span></span><span class="s3"><i>/* Todo */</i><i></i></span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">        </span></span><span class="s3">ArrayList</span><span class="s5">&lt;</span><span class="s3">Candidate</span><span class="s5">&gt; result </span><span class="s1">=</span><span class="s2"> </span><span class="s1">new</span><span class="s2"> </span><span class="s3">ArrayList</span><span class="s2">&lt;&gt;();</span></p>
+<p class="p3"><span class="s11"></span><br></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">        </span></span><span class="s1">for</span><span class="s3"> (</span><span class="s6">Candidate</span><span class="s5"> candidate </span><span class="s1">:</span><span class="s3"> candidates){</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">            </span></span><span class="s1">if</span><span class="s3"> (</span><span class="s5">candidate</span><span class="s3">.</span><span class="s8">selection</span><span class="s3">().</span><span class="s8">equalsIgnoreCase</span><span class="s3">(selection)) {</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">                </span></span><span class="s5">result</span><span class="s3">.</span><span class="s8">add</span><span class="s3">(candidate);</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">        </span></span><span class="s1">return</span><span class="s3"> result;</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p3"><span class="s3"><span class="Apple-converted-space">    </span></span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">    </span></span><span class="s7"><i>/*<span class="Apple-converted-space"> </span></i><i></i></span></p>
+<p class="p6"><span class="s3"><i><span class="Apple-converted-space">    </span>getPriorityCandidates<span class="Apple-converted-space"> </span></i><i></i></span></p>
+<p class="p6"><span class="s3"><i><span class="Apple-converted-space">    </span>trả về danh sách thí sinh được ưu tiên (có độ ưu tiên bằng 1)</i><i></i></span></p>
+<p class="p6"><span class="s3"><i><span class="Apple-converted-space">    </span>*/</i><i></i></span></p>
+<p class="p4"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s1">public</span><span class="s2"> </span><span class="s6">ArrayList</span><span class="s2">&lt;</span><span class="s6">Candidate</span><span class="s2">&gt; </span><span class="s3">getPriorityCandidates</span><span class="s2">() {</span></p>
+<p class="p3"><span class="s3"><span class="Apple-converted-space">        </span></span></p>
+<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span></span><span class="s3"><i>/* Todo */</i><i></i></span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">        </span></span><span class="s3">ArrayList</span><span class="s5">&lt;</span><span class="s3">Candidate</span><span class="s5">&gt; result </span><span class="s1">=</span><span class="s2"> </span><span class="s1">new</span><span class="s2"> </span><span class="s3">ArrayList</span><span class="s2">&lt;&gt;();</span></p>
+<p class="p3"><span class="s11"></span><br></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">        </span></span><span class="s1">for</span><span class="s3"> (</span><span class="s6">Candidate</span><span class="s5"> candidate </span><span class="s1">:</span><span class="s3"> candidates){</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">            </span></span><span class="s1">if</span><span class="s3"> (</span><span class="s5">candidate</span><span class="s3">.</span><span class="s8">priority</span><span class="s3">() </span><span class="s1">==</span><span class="s3"> </span><span class="s10">1</span><span class="s3">) {</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">                </span></span><span class="s5">result</span><span class="s3">.</span><span class="s8">add</span><span class="s3">(candidate);</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">        </span></span><span class="s1">return</span><span class="s3"> result;</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p3"><span class="s3"><span class="Apple-converted-space">    </span></span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">    </span></span><span class="s7"><i>/*<span class="Apple-converted-space"> </span></i><i></i></span></p>
+<p class="p6"><span class="s3"><i><span class="Apple-converted-space">    </span>sortByName<span class="Apple-converted-space"> </span></i><i></i></span></p>
+<p class="p6"><span class="s3"><i><span class="Apple-converted-space">    </span>tra ve danh sach cac thi sinh duoc sap xep theo ho va ten (name)</i><i></i></span></p>
+<p class="p6"><span class="s3"><i><span class="Apple-converted-space">    </span>*/</i><i></i></span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s1">public</span><span class="s2"> </span><span class="s3">ArrayList</span><span class="s2">&lt;</span><span class="s3">Candidate</span><span class="s2">&gt; </span><span class="s8">sortByName</span><span class="s2">() {</span></p>
+<p class="p6"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s3"><i>// Tạo bản sao của danh sách gốc để không thay đổi danh sách ban đầu</i><i></i></span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s3">ArrayList</span><span class="s5">&lt;</span><span class="s3">Candidate</span><span class="s5">&gt; sortedList </span><span class="s1">=</span><span class="s2"> </span><span class="s1">new</span><span class="s2"> </span><span class="s3">ArrayList</span><span class="s2">&lt;&gt;(candidates);</span></p>
+<p class="p3"><span class="s11"></span><br></p>
+<p class="p6"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s3"><i>// Duyệt qua từng cặp phần tử để so sánh tên và sắp xếp (bubble sort đơn giản)</i><i></i></span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">    </span></span><span class="s1">for</span><span class="s3"> (</span><span class="s1">int</span><span class="s5"> i </span><span class="s1">=</span><span class="s3"> </span><span class="s10">0</span><span class="s3">; i </span><span class="s1">&lt;</span><span class="s3"> </span><span class="s5">sortedList</span><span class="s3">.</span><span class="s8">size</span><span class="s3">() </span><span class="s1">-</span><span class="s3"> </span><span class="s10">1</span><span class="s3">; i</span><span class="s1">++</span><span class="s3">) {</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">        </span></span><span class="s1">for</span><span class="s3"> (</span><span class="s1">int</span><span class="s5"> j </span><span class="s1">=</span><span class="s3"> i </span><span class="s1">+</span><span class="s3"> </span><span class="s10">1</span><span class="s3">; j </span><span class="s1">&lt;</span><span class="s3"> </span><span class="s5">sortedList</span><span class="s3">.</span><span class="s8">size</span><span class="s3">(); j</span><span class="s1">++</span><span class="s3">) {</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">            </span></span><span class="s6">String</span><span class="s5"> name1 </span><span class="s1">=</span><span class="s3"> </span><span class="s5">sortedList</span><span class="s3">.</span><span class="s8">get</span><span class="s3">(i).</span><span class="s8">name</span><span class="s3">();</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">            </span></span><span class="s6">String</span><span class="s5"> name2 </span><span class="s1">=</span><span class="s3"> </span><span class="s5">sortedList</span><span class="s3">.</span><span class="s8">get</span><span class="s3">(j).</span><span class="s8">name</span><span class="s3">();</span></p>
+<p class="p3"><span class="s11"></span><br></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">            </span></span><span class="s1">if</span><span class="s3"> (</span><span class="s5">name1</span><span class="s3">.</span><span class="s8">compareToIgnoreCase</span><span class="s3">(name2) </span><span class="s1">&gt;</span><span class="s3"> </span><span class="s10">0</span><span class="s3">) {</span></p>
+<p class="p6"><span class="s2"><span class="Apple-converted-space">                </span></span><span class="s3"><i>// Hoán đổi nếu tên đứng sau trong bảng chữ cái</i><i></i></span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">                </span></span><span class="s6">Candidate</span><span class="s5"> temp </span><span class="s1">=</span><span class="s3"> </span><span class="s5">sortedList</span><span class="s3">.</span><span class="s8">get</span><span class="s3">(i);</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">                </span></span><span class="s5">sortedList</span><span class="s3">.</span><span class="s8">set</span><span class="s3">(i, </span><span class="s5">sortedList</span><span class="s3">.</span><span class="s8">get</span><span class="s3">(j));</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">                </span></span><span class="s5">sortedList</span><span class="s3">.</span><span class="s8">set</span><span class="s3">(j, temp);</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">    </span></span><span class="s1">return</span><span class="s3"> sortedList;</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p3"><span class="s3"><span class="Apple-converted-space">    </span></span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">    </span></span><span class="s7"><i>/*<span class="Apple-converted-space"> </span></i><i></i></span></p>
+<p class="p6"><span class="s3"><i><span class="Apple-converted-space">    </span>getSecondYoungestCandidates<span class="Apple-converted-space"> </span></i><i></i></span></p>
+<p class="p6"><span class="s3"><i><span class="Apple-converted-space">    </span>trả về danh sách các thí sinh có tuổi trẻ thứ 2 trong danh sách<span class="Apple-converted-space"> </span></i><i></i></span></p>
+<p class="p6"><span class="s3"><i><span class="Apple-converted-space">    </span>(ví dụ: các khách hàng có các năm sinh 1990 1991 1992 1993,<span class="Apple-converted-space"> </span></i><i></i></span></p>
+<p class="p6"><span class="s3"><i><span class="Apple-converted-space">    </span>trả về danh sách các khách hàng sinh năm 1992)</i><i></i></span></p>
+<p class="p6"><span class="s3"><i><span class="Apple-converted-space">    </span>*/</i><i></i></span></p>
+<p class="p4"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s1">public</span><span class="s2"> </span><span class="s6">ArrayList</span><span class="s2">&lt;</span><span class="s6">Candidate</span><span class="s2">&gt; </span><span class="s3">getSecondYoungestCandidates</span><span class="s2">() {</span></p>
+<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span></span><span class="s3"><i>/* Todo */</i><i></i></span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">        </span></span><span class="s3">ArrayList</span><span class="s5">&lt;</span><span class="s3">Candidate</span><span class="s5">&gt; sortedyear </span><span class="s1">=</span><span class="s2"> </span><span class="s1">new</span><span class="s2"> </span><span class="s3">ArrayList</span><span class="s2">&lt;&gt;(candidates);</span></p>
+<p class="p3"><span class="s11"></span><br></p>
+<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span></span><span class="s3"><i>// Bubble sort đơn giản dựa trên năm sinh</i><i></i></span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">        </span></span><span class="s1">for</span><span class="s3"> (</span><span class="s1">int</span><span class="s5"> i </span><span class="s1">=</span><span class="s3"> </span><span class="s10">0</span><span class="s3">; i </span><span class="s1">&lt;</span><span class="s3"> </span><span class="s5">sortedyear</span><span class="s3">.</span><span class="s8">size</span><span class="s3">() </span><span class="s1">-</span><span class="s3"> </span><span class="s10">1</span><span class="s3">; i</span><span class="s1">++</span><span class="s3">) {</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">            </span></span><span class="s1">for</span><span class="s3"> (</span><span class="s1">int</span><span class="s5"> j </span><span class="s1">=</span><span class="s3"> i </span><span class="s1">+</span><span class="s3"> </span><span class="s10">1</span><span class="s3">; j </span><span class="s1">&lt;</span><span class="s3"> </span><span class="s5">sortedyear</span><span class="s3">.</span><span class="s8">size</span><span class="s3">(); j</span><span class="s1">++</span><span class="s3">) {</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">                </span></span><span class="s1">if</span><span class="s3"> (</span><span class="s5">sortedyear</span><span class="s3">.</span><span class="s8">get</span><span class="s3">(i).</span><span class="s8">year</span><span class="s3">() </span><span class="s1">&lt;</span><span class="s3"> </span><span class="s5">sortedyear</span><span class="s3">.</span><span class="s8">get</span><span class="s3">(j).</span><span class="s8">year</span><span class="s3">()) {</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">                    </span></span><span class="s6">Candidate</span><span class="s5"> tmp </span><span class="s1">=</span><span class="s3"> </span><span class="s5">sortedyear</span><span class="s3">.</span><span class="s8">get</span><span class="s3">(i);</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">                    </span></span><span class="s5">sortedyear</span><span class="s3">.</span><span class="s8">set</span><span class="s3">(i, </span><span class="s5">sortedyear</span><span class="s3">.</span><span class="s8">get</span><span class="s3">(j));</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">                    </span></span><span class="s5">sortedyear</span><span class="s3">.</span><span class="s8">set</span><span class="s3">(j, tmp);</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">                </span>}</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span></span><span class="s3"><i>// Tìm năm sinh trẻ thứ 2</i><i></i></span></p>
+<p class="p7"><span class="s2"><span class="Apple-converted-space">        </span></span><span class="s1">int</span><span class="s3"> youngestYear </span><span class="s1">=</span><span class="s2"> </span><span class="s3">sortedyear</span><span class="s2">.</span><span class="s8">get</span><span class="s2">(</span><span class="s10">0</span><span class="s2">).</span><span class="s8">year</span><span class="s2">();<span class="Apple-converted-space">  </span></span><span class="s7"><i>// Trẻ nhất</i><i></i></span></p>
+<p class="p7"><span class="s2"><span class="Apple-converted-space">        </span></span><span class="s6">Integer</span><span class="s3"> secondYoungestYear </span><span class="s1">=</span><span class="s2"> </span><span class="s10">null</span><span class="s2">;</span></p>
+<p class="p3"><span class="s11"></span><br></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">        </span></span><span class="s1">for</span><span class="s3"> (</span><span class="s6">Candidate</span><span class="s5"> c </span><span class="s1">:</span><span class="s3"> sortedyear) {</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">            </span></span><span class="s1">if</span><span class="s3"> (</span><span class="s5">c</span><span class="s3">.</span><span class="s8">year</span><span class="s3">() </span><span class="s1">&lt;</span><span class="s3"> youngestYear) {</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">                </span>secondYoungestYear </span><span class="s1">=</span><span class="s3"> </span><span class="s5">c</span><span class="s3">.</span><span class="s8">year</span><span class="s3">();</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">                </span></span><span class="s1">break</span><span class="s3">;</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span></span><span class="s3"><i>// Trả về tất cả candidate có năm sinh == secondYoungestYear</i><i></i></span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">        </span></span><span class="s3">ArrayList</span><span class="s5">&lt;</span><span class="s3">Candidate</span><span class="s5">&gt; result </span><span class="s1">=</span><span class="s2"> </span><span class="s1">new</span><span class="s2"> </span><span class="s3">ArrayList</span><span class="s2">&lt;&gt;();</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">        </span></span><span class="s1">if</span><span class="s3"> (secondYoungestYear </span><span class="s1">!=</span><span class="s3"> </span><span class="s10">null</span><span class="s3">) {</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">            </span></span><span class="s1">for</span><span class="s3"> (</span><span class="s6">Candidate</span><span class="s5"> c </span><span class="s1">:</span><span class="s3"> sortedyear) {</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">                </span></span><span class="s1">if</span><span class="s3"> (</span><span class="s5">c</span><span class="s3">.</span><span class="s8">year</span><span class="s3">() </span><span class="s1">==</span><span class="s3"> secondYoungestYear) {</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">                    </span></span><span class="s5">result</span><span class="s3">.</span><span class="s8">add</span><span class="s3">(c);</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">                </span>}</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p3"><span class="s11"></span><br></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">        </span></span><span class="s1">return</span><span class="s3"> result;</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p3"><span class="s3"><span class="Apple-converted-space">    </span></span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">    </span></span><span class="s7"><i>/*</i><i></i></span></p>
+<p class="p6"><span class="s3"><i><span class="Apple-converted-space">    </span>printCandidatesFromArray<span class="Apple-converted-space"> </span></i><i></i></span></p>
+<p class="p6"><span class="s3"><i><span class="Apple-converted-space">    </span>in danh sach cac thi sinh tu mot List da cho</i><i></i></span></p>
+<p class="p6"><span class="s3"><i><span class="Apple-converted-space">    </span>*/</i><i></i></span></p>
+<p class="p4"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s1">public</span><span class="s2"> </span><span class="s1">void</span><span class="s2"> </span><span class="s3">printCandidatesFromArray</span><span class="s2">(</span><span class="s6">ArrayList</span><span class="s2">&lt;</span><span class="s6">Candidate</span><span class="s2">&gt; candidates) {</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">        </span></span><span class="s1">if</span><span class="s3"> (candidates </span><span class="s1">==</span><span class="s3"> </span><span class="s10">null</span><span class="s3">) {</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">            </span></span><span class="s1">return</span><span class="s3">;</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p3"><span class="s3"><span class="Apple-converted-space">        </span></span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">        </span></span><span class="s1">for</span><span class="s3"> (</span><span class="s1">int</span><span class="s5"> i </span><span class="s1">=</span><span class="s3"> </span><span class="s10">0</span><span class="s3">; i </span><span class="s1">&lt;</span><span class="s3"> </span><span class="s5">candidates</span><span class="s3">.</span><span class="s8">size</span><span class="s3">(); i</span><span class="s1">++</span><span class="s3">) {</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">            </span></span><span class="s5">candidates</span><span class="s3">.</span><span class="s8">get</span><span class="s3">(i).</span><span class="s8">print</span><span class="s3">();</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p3"><span class="s3"><span class="Apple-converted-space">    </span></span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">    </span></span><span class="s7"><i>/*</i><i></i></span></p>
+<p class="p6"><span class="s3"><i><span class="Apple-converted-space">    </span>printCandidates<span class="Apple-converted-space"> </span></i><i></i></span></p>
+<p class="p6"><span class="s3"><i><span class="Apple-converted-space">    </span>in danh cach cac thi sinh duoc luu trong bien thanh vien candidates</i><i></i></span></p>
+<p class="p6"><span class="s3"><i><span class="Apple-converted-space">    </span>*/</i><i></i></span></p>
+<p class="p4"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s1">public</span><span class="s2"> </span><span class="s1">void</span><span class="s2"> </span><span class="s3">printCandidates</span><span class="s2">() {</span></p>
+<p class="p4"><span class="s2"><span class="Apple-converted-space">        </span></span><span class="s3">printCandidatesFromArray</span><span class="s2">(</span><span class="s5">this</span><span class="s2">.</span><span class="s5">candidates</span><span class="s2">);</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p3"><span class="s3"><span class="Apple-converted-space">    </span></span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">    </span></span><span class="s1">public</span><span class="s3"> </span><span class="s1">static</span><span class="s3"> </span><span class="s1">void</span><span class="s3"> </span><span class="s8">main</span><span class="s3">(</span><span class="s6">String</span><span class="s3">[] args) {</span></p>
+<p class="p7"><span class="s2"><span class="Apple-converted-space">        </span></span><span class="s6">CandidateManager</span><span class="s3"> candidateManager </span><span class="s1">=</span><span class="s2"> </span><span class="s1">new</span><span class="s2"> </span><span class="s8">CandidateManager</span><span class="s2">();</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">        </span></span><span class="s1">if</span><span class="s3"> (</span><span class="s1">!</span><span class="s5">candidateManager</span><span class="s3">.</span><span class="s8">readData</span><span class="s3">(</span><span class="s4">"candidates.txt"</span><span class="s3">)) {</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">            </span></span><span class="s1">return</span><span class="s3">;</span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p3"><span class="s3"><span class="Apple-converted-space">            </span></span></p>
+<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span></span><span class="s3"><i>//ArrayList&lt;Candidate&gt; selectionCandidates = candidateManager.getSelectionCandicates("A");</i><i></i></span></p>
+<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span></span><span class="s3"><i>//candidateManager.printCandidatesFromArray(selectionCandidates);</i><i></i></span></p>
+<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span></span><span class="s3"><i>//System.out.println();</i><i></i></span></p>
+<p class="p3"><span class="s3"><span class="Apple-converted-space">        </span></span></p>
+<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span></span><span class="s3"><i>//ArrayList&lt;Candidate&gt; priorityCandidates = candidateManager.getPriorityCandidates();</i><i></i></span></p>
+<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span></span><span class="s3"><i>//candidateManager.printCandidatesFromArray(priorityCandidates);</i><i></i></span></p>
+<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span></span><span class="s3"><i>//System.out.println();</i><i></i></span></p>
+<p class="p3"><span class="s3"><span class="Apple-converted-space">            </span></span></p>
+<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span></span><span class="s3"><i>//ArrayList&lt;Candidate&gt; sortedNameCandidates = candidateManager.sortByName();</i><i></i></span></p>
+<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span></span><span class="s3"><i>//candidateManager.printCandidatesFromArray(sortedNameCandidates);</i><i></i></span></p>
+<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span></span><span class="s3"><i>//System.out.println();</i><i></i></span></p>
+<p class="p3"><span class="s3"><span class="Apple-converted-space">            </span></span></p>
+<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span></span><span class="s3"><i>//ArrayList&lt;Candidate&gt; secondYoungestCandidates = candidateManager.getSecondYoungestCandidates();</i><i></i></span></p>
+<p class="p6"><span class="s2"><span class="Apple-converted-space">        </span></span><span class="s3"><i>//candidateManager.printCandidatesFromArray(secondYoungestCandidates);</i><i></i></span></p>
+<p class="p5"><span class="s3"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p5"><span class="s3">}</span></p>
+<p class="p3"><span class="s11"></span><br></p>
+</body>
+</html>
